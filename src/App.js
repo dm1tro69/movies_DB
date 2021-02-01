@@ -5,7 +5,13 @@ import Home from './Home'
 import Movie from './SingleMovie'
 
 function App() {
-  return <h2>movie DB starter</h2>
+
+  return (
+      <Switch>
+      <Route exact path={'/'} component={Home}/>
+      <Route  path={'/movies/:id'} component={Movie}/>
+      </Switch>
+  )
 }
 
 export default App
